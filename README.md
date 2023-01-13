@@ -2,4 +2,4 @@
 Example website projesaqe2ct for learning code in class
 
 
-this is class 1 stuff
+this is class 2 stuff
