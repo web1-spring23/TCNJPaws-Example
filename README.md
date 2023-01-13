@@ -1,2 +1,2 @@
 # TCNJPaws-Example
-Example website project for learning code in class
+Example website projesaqe2ct for learning code in class
