@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@700&family=Lexend:wght@400;700&display=swap');
+
+:root {
+    font-size: 62.5%;
+    --cream: #FFF9F2;
+    --teal: #3D96B7;
+    --dark-blue: #333651;
+}
+ 
+body {
+    font-size: 1.8rem;
+    color: var(--dark-blue);
+    font-family: 'Lexend', sans-serif;
+    margin: 0px;
+    background-color: var(--cream);
+    
+}
+
+
+a {
+    color: var(--teal);
+    font-weight: bold;
+}
+
+a:hover {
+    color: var(--dark-blue);
+}
+
+h1 {
+    font-family: 'Grandstander', sans-serif;
+    font-size: 3.6rem;
+}
+
+/*don't show bullets */
+nav menu li {
+    list-style: none;
+    margin-right: 65px;
+}
+
+nav menu button + menu li {
+    margin-right: 0px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+/*flex works on the immediate children of this selected element*/
+header nav menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0px;
+    align-items: center;
+}
+
+/*don't show menus nested in a menu that is nested in a nav. aka our submenus*/
+header nav menu menu {
+    display: none;
+}
+
+/*apply this style to a menu with a sibling of button when the li ancestor is being hovered on that has an ancestor of menu and nav*/
+header nav menu li:hover button + menu {
+    display: block;
+    position: absolute;
+    background-color: var(--teal);
+    color: var(--cream);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/*targets the whole nav for the background and padding*/
+header nav {
+    background-color: var(--teal);
+    /*top | bottom | left | right */
+    /*top&bottom | left&right */
+    padding: 30px;
+   
+}
+
+/*we applied a class attribute to the logo in the hmtl*/
+.logo {
+    font-family: 'Grandstander', cursive;
+    font-size: 3.2rem;
+    text-decoration: none;
+    color: var(--dark-blue);
+}
+
+/*styles apply to the buttons and the link with the button-primary class*/
+button, .button-primary {
+    background-color: var(--dark-blue);
+    border: none;
+    color: var(--cream);
+    font-family: 'Lexend', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    padding: 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+}
+
+
+.button-secondary {
+    background: none;
+    border: none;
+    color: var(--dark-blue);
+    font-family: 'Lexend', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    padding: 14px;
+    border-radius: 5px;
+    text-decoration: none; 
+    border-style: solid;
+    border-width: 3px;
+    border-color: var(--dark-blue);
+    /* I don't want the left side to have a margin */
+    margin: 15px 15px 15px 0px;
+    display: inline-block;
+}
+
+.button-secondary:hover {
+    color: var(--teal);
+}
+
+.button-secondary img, .button-secondary svg  {
+    vertical-align: bottom;
+}
+
+nav .button-primary:hover {
+    outline-color: var(--cream);
+    outline-width: 3px;
+    outline-style: solid;
+    cursor: pointer;
+    color: var(--cream);
+    text-decoration: none;
+}
+
+/*submenu links*/
+header nav menu li menu li {
+  padding: 5px;
+}
+
+
+
+/*all links*/
+header nav menu li a {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--cream);
+}
+
+header nav menu button {
+    background: none;
+    cursor: pointer;
+    padding: 0px;
+}
+
+
+/*buttons and links on hover*/
+header nav menu button:hover, header nav menu li a:hover {
+    color: var(--dark-blue);
+
+}
+
+
+
+/* Top section */
+#top-section {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: 60px auto;
+    justify-content: space-around;
+
+}
+
+#top-section div {
+    padding: 30px;
+    width: 430px;
+}
+
+
+/* Featured Pets */
+
+.featured-pets {
+    /*top&bottom | left&right */
+
+    width: 80%;
+    margin: 50px auto;
+}
+
+.featured-pets h3 {
+    margin-bottom: 5px;
+}
+
+.featured-pets h3 a {
+    color: var(--dark-blue);
+    text-decoration: none;
+}
+
+.featured-pets div {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+/*blog*/
+
+#blog {
+    width: 80%;
+    margin: 100px auto;
+    
+}
+
+#blog div {
+    display: flex;
+    justify-content: space-between;
+    
+
+}
+
+/*testimonials*/
+#testimonials {
+    background-color: var(--teal);
+    color: var(--cream);
+    text-align: center;
+    margin: 100px 0px;
+    padding: 50px;
+}
+#testimonials div {
+    display: flex;
+    justify-content: space-around;
+}
+
+/*footer */
+
+footer {
+    background-color: var(--dark-blue);
+    color: var(--cream);
+    padding: 50px;
+}
+
+footer nav > menu {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer a:hover {
+    color: var(--cream);
+}
+
+footer menu {
+    padding: 0px;
+}
+
+footer menu li {
+    margin-bottom: 10px;
+}
+
+footer span {
+    text-align: center;
+    display: block;
+}
+/* bailey page */
+
+.pet section {
+    width: 80%;
+    margin: 30px auto;
+}
+
+section#about, section#apply {
+    width: 100%;
+
+}
+
+section#top-pet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+#top-pet a {
+    display: block;
+    width: 100%;
+
+}
+
+#pet-image-gallery {
+    text-align: center;
+    background-color: var(--dark-blue);
+    width: 100%;
+    padding: 30px;
+}
